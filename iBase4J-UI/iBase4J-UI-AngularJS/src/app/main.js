@@ -1,11 +1,11 @@
 'use strict';
 
-var app = angular.module('app', ['ui.load', 'ui.router', 'ngStorage', 'brantwills.paging', 'oc.lazyLoad', 'ngImgCrop']);
+var app = angular.module('app', ['ui.load', 'ui.router', 'ngStorage', 'brantwills.paging', 'oc.lazyLoad', 'ngImgCrop','ngAnimate', 'toaster']);
 
 /* Controllers */
 angular.module('app')
-  .controller('AppCtrl', ['$scope', '$localStorage', '$window','$http','$state','$rootScope',
-    function($scope,   $localStorage,   $window ,$http,$state,$rootScope) {
+  .controller('AppCtrl', ['$scope', '$localStorage', '$window','$http','$state','$rootScope','toaster',
+    function($scope,   $localStorage,   $window ,$http,$state,$rootScope,toaster) {
         // add 'ie' classes to html
         var isIE = !!navigator.userAgent.match(/MSIE/i);
         isIE && angular.element($window.document.body).addClass('ie');

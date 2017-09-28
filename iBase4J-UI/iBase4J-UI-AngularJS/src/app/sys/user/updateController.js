@@ -1,8 +1,8 @@
 'use strict';
 
     angular.module('app')
-        .controller('userUpdateController', ['$scope', '$rootScope', '$state', '$timeout', 
-                                             function($scope, $rootScope, $state, $timeout) {
+        .controller('userUpdateController', ['$scope', '$rootScope', '$state', '$timeout', 'toaster',
+                                             function($scope, $rootScope, $state, $timeout,toaster) {
         var title = "";
         var defaultAva = $rootScope.defaultAvatar;
         $scope.myImage='';
